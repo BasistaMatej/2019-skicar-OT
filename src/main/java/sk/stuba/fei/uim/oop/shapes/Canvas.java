@@ -54,9 +54,7 @@ public class Canvas extends JPanel {
         }
         for (Shape shape : lines) {
             g.setColor(shape.getColor());
-            int[] x = {shape.getStartX(),shape.getStartX()+3,shape.getEndX()+3,shape.getEndX()};
-            int[] y = {shape.getStartY(),shape.getStartY()+3,shape.getEndY()+3,shape.getEndY()};
-            g.fillPolygon(x,y,4);
+            g.drawLine(shape.getStartX(),shape.getStartY(),shape.getEndX(),shape.getEndY());
         }
     }
 }
